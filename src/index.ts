@@ -30,7 +30,9 @@ export default function(api: IApi) {
         api.logger.info(`skipPlugins: ${skipPlugins[key].join(',')}`);
       }
     }
+  }
 
+  api.onGenerateFiles(() => {
     // 将umi-plugin-antd-theme的配置文件用js文件定义
     const themeConfigJsFilePath = api.utils.winPath(
       api.cwd + '/config/theme.config.js',
@@ -43,5 +45,5 @@ export default function(api: IApi) {
       fs.writeFileSync(themeConfigJsonFilePath, JSON.stringify(theme, null, 2));
       api.logger.info('auto generate umi-plugin-antd-theme config');
     }
-  }
+  });
 }

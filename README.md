@@ -4,13 +4,15 @@
 
 对 umi 插件进行一些全局配置。
 
-1. v1.0.0
+## 特性
+
+### v1.0.0
 
 - skip 某些插件
 
-2. v1.0.1
+### v1.0.2
 
-- 将 umi-plugin-antd-theme 的配置文件用 js 文件定义
+- 将 umi-plugin-antd-theme 的配置文件用 js 文件定义，js 文件需要使用 CommonJS 规范，内容和 json 配置文件一样
 
 ## Install
 
